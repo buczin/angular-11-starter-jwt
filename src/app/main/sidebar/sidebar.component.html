@@ -1,0 +1,54 @@
+<div class="header">
+    <div class="brand-logo">
+        <img alt="logo" src="assets/img/logo-white.png">
+    </div>
+    <div class="menu-arrow">
+        <i class="pi pi-caret-right"></i>
+        <a #menu_icon (click)="openMenu()" class="nav_toggle" role="button" aria-expanded="false" aria-controls="menu">
+            <svg class="m-menu-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
+                <g>
+                    <line class="m-menu-icon_bar" x1="13" y1="16.5" x2="37" y2="16.5" />
+                    <line class="m-menu-icon_bar" x1="13" y1="24.5" x2="37" y2="24.5" />
+                    <line class="m-menu-icon_bar" x1="13" y1="24.5" x2="37" y2="24.5" />
+                    <line class="m-menu-icon_bar" x1="13" y1="32.5" x2="37" y2="32.5" />
+                    <circle class="m-menu-icon_circle" r="23" cx="25" cy="25" />
+                </g>
+            </svg>
+        </a>
+    </div>
+</div>
+<div #menu_content class="content">
+    <div class="user">
+        <span>{{username}}</span>
+    </div>
+    <div class="menu">
+
+        <ul class="items">
+            <li routerLinkActive="active">
+                <a (click)="closeMenu()" [routerLink]="['']">
+                    <span class="title">Dashboard</span>
+                    <span class="details">---</span>
+                </a>
+                <div class="icon">
+                    <i class="pi pi-home"></i>
+                </div>
+            </li>
+
+            <li>
+                <a (click)="closeMenu()" (click)="logout()">
+                    <span class="title">Wyloguj</span>
+                </a>
+                <div class="icon">
+                    <i class="pi pi-sign-out"></i>
+                </div>
+            </li>
+            <li></li>
+        </ul>
+
+    </div>
+
+    <div class="version">
+        <span>v. {{version}}</span>
+    </div>
+    <div class="splash"></div>
+</div>

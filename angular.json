@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -28,7 +31,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/primeicons/primeicons.css"
             ],
             "scripts": []
           },
@@ -65,7 +69,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sb-starter:build"
+            "browserTarget": "sb-starter:build",
+            "proxyConfig": "api/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -91,7 +96,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/primeicons/primeicons.css"
             ],
             "scripts": []
           }

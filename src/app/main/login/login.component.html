@@ -1,0 +1,27 @@
+<div class="lgn-bg"></div>
+
+<form class="sb-form-signin" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+
+    <div class="brand-logo">
+        <img alt="logo" src="assets/img/logo.png">
+    </div>
+
+    <div class="inputs">
+        <input id="username" type="text" placeholder="Login" formControlName="username"
+            [ngClass]="{ 'is-invalid': f.username.touched && f.username.errors }" />
+        <input id="password" type="password" placeholder="Hasło" formControlName="password"
+            [ngClass]="{ 'is-invalid': f.password.touched && f.password.errors }" />
+    </div>
+
+    <div *ngIf="submitted" class="invalid-feedback">
+        <div *ngIf="isLoginFailed">Niepoprawny login lub hasło</div>
+    </div>
+
+    <div class="btn-submit">
+        <button [disabled]="loading" class="sb-button blue">
+            <span *ngIf="loading" class="btn-spinner"></span>
+            Zaloguj
+        </button>
+    </div>
+
+</form>

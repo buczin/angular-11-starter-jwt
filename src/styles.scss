@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #fff !important;
+    color: #2c2c2c;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji,
+        Segoe UI Emoji, Segoe UI Symbol !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+}
+
+.sb-button {
+    border-radius: 0px !important;
+    &:focus {
+        outline: 0 none;
+        outline-offset: 0;
+        box-shadow: 0 0 0 0.2rem #8dcdff;
+        border-color: #007ad9;
+    }
+    &.blue {
+        color: #fff !important;
+        background: #13447e !important;
+        border: 1px solid #13447e !important;
+    }
+    &.red {
+        color: #fff !important;
+        background-color: #e91224 !important;
+        border: 1px solid #e91224 !important;
+    }
+    &.yellow {
+        color: #ffffff !important;
+        background-color: #f9c642 !important;
+        border: 1px solid #f9c642 !important;
+    }
+    &.green {
+        color: #ffffff !important;
+        background-color: #4aa564 !important;
+        border: 1px solid #4aa564 !important;
+    }
+    &.gray {
+        color: #ffffff;
+        background: #607d8b;
+        border: 1px solid #607d8b;
+    }
+
+    &.o-red {
+        color: #e91224 !important;
+        background-color: unset !important;
+        border: 1px solid #e91224 !important;
+    }
+    &.o-red2 {
+        color: #e91224 !important;
+        background-color: transparent;
+        border: 0px !important;
+        &:hover {
+            color: #fff !important;
+            background-color: #e91224 !important;
+        }
+    }
+    &.o-blue {
+        color: #13447e !important;
+        background-color: transparent;
+        border: 0px !important;
+        &:hover {
+            color: #fff !important;
+            background: #13447e !important;
+        }
+    }
+    &.o-green {
+        color: #4aa564 !important;
+        background-color: transparent;
+        border: 0px !important;
+        &:hover {
+            color: #fff !important;
+            background: #4aa564 !important;
+        }
+    }
+    &.o-gray {
+        color: #607d8b !important;
+        background-color: unset !important;
+        border: 1px solid #607d8b;
+    }
+    &.hide {
+        display: none;
+    }
+    .btn-spinner {
+        display: inline-block;
+        width: .7rem;
+        height: .7rem;
+        border-width: 0.2em;
+        vertical-align: text-bottom;
+        border: 0.2em solid #fff;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: spinner-border 0.75s linear infinite;
+    }
+}
+
+@keyframes spinner-border {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
